@@ -7,7 +7,23 @@ Practice accessing data by console.log-ing the following pieces of data note, yo
 
 //(a) Home Team name for 2014 world cup final
 
+const homeTeam = fifaData.filter(function(item){
+    return item.Stage === 'Final';
+}).map(function(item){
+    return item["Home Team Name"];
+})
+
+console.log('Task 1a', homeTeam);
+
 //(b) Away Team name for 2014 world cup final
+
+const awayTeam = fifaData.filter(function(item){
+    return item.Stage === 'Final';
+}).map(function(item){
+    return item["Away Team Name"];
+})
+
+console.log('Task 1b', awayTeam);
 
 //(c) Home Team goals for 2014 world cup final
 
